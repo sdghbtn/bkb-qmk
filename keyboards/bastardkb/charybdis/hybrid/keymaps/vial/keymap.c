@@ -188,10 +188,10 @@ static uint16_t auto_pointer_layer_timer = 0;
     R06,   R07,           R08,           R09,           R10,           R11,       \
     L12,   L13,           L14,           L15,           L16,           L17,       \
     R18,   R19,           R20,           R21,           R22,           R23,       \
-    L24,   L25,           L26,           L27,           L28,           L29,       \
-    R30,   R31,           R32,           R33,           R34,           R35,       \
-    L36,   LGUI_T(L37),   LALT_T(L38),   LCTL_T(L39),   LSFT_T(L40),   L41,       \
-    R42,   RSFT_T(R43),   RCTL_T(R44),   LALT_T(R45),   RGUI_T(R46),   R47,       \
+    L24,   LGUI_T(L25),   LALT_T(L26),   LCTL_T(L27),   LSFT_T(L28),   L29,       \
+    R30,   RSFT_T(R31),   RCTL_T(R32),   LALT_T(R33),   RGUI_T(R34),   R35,       \
+    L36,   L37,           L38,           L39,           L40,           L41,       \
+    R42,   R43,           R44,           R45,           R46,           R47,       \
       __VA_ARGS__
 #define HOME_ROW_MOD_GACS(...) _HOME_ROW_MOD_GACS(__VA_ARGS__)
 
