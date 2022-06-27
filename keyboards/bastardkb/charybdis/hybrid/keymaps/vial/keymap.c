@@ -54,13 +54,13 @@ static uint16_t auto_pointer_layer_timer = 0;
 
 // clang-format off
 /** \brief QWERTY layout (3 rows, 10 columns). */
-#define LAYOUT_LAYER_BASE                                                                                                                        \
-    ___________________DEAD_HALF_ROW____________________,               ___________________DEAD_HALF_ROW____________________,                    \
-    XXXXXXX,   KC_Q,           KC_W,   KC_E,      KC_R,      KC_T,      KC_Y,      KC_U,   KC_I,      KC_O,     KC_P,              XXXXXXX,      \
-    XXXXXXX,   KC_A,           KC_S,   KC_D,      KC_F,      KC_G,      KC_H,      KC_J,   KC_K,      KC_L,     KC_QUOT,           XXXXXXX,      \
-    XXXXXXX,   _L_PTR(KC_Z),   KC_X,   KC_C,      KC_V,      KC_B,      KC_N,      KC_M,   KC_COMM,   KC_DOT,   _L_PTR(KC_SLSH),   XXXXXXX,      \
-                                       ESC_MED,   SPC_NAV,   TAB_FUN,   ENT_SYM,   BSP_NUM,                                                      \
-                                                  XXXXXXX,   XXXXXXX,   XXXXXXX
+#define LAYOUT_LAYER_BASE                                                                                                     \
+    ___________________DEAD_HALF_ROW____________________,       ___________________DEAD_HALF_ROW____________________,         \
+    XXXXXXX,   KC_Q,   KC_W,   KC_E,      KC_R,      KC_T,      KC_Y,      KC_U,   KC_I,      KC_O,     KC_P,      XXXXXXX,   \
+    XXXXXXX,   KC_A,   KC_S,   KC_D,      KC_F,      KC_G,      KC_H,      KC_J,   KC_K,      KC_L,     KC_QUOT,   XXXXXXX,   \
+    XXXXXXX,   KC_Z,   KC_X,   KC_C,      KC_V,      KC_B,      KC_N,      KC_M,   KC_COMM,   KC_DOT,   KC_SLSH,   XXXXXXX,   \
+                               ESC_MED,   SPC_NAV,   TAB_FUN,   ENT_SYM,   BSP_NUM,                                           \
+                                          XXXXXXX,   XXXXXXX,   XXXXXXX
 
 /** Convenience row shorthands. */
 #define ___________________DEAD_HALF_ROW____________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
@@ -179,13 +179,13 @@ static uint16_t auto_pointer_layer_timer = 0;
  *     HOME_ROW_MOD_GACS(LAYER_ALPHAS_QWERTY)
  */
 #define _HOME_ROW_MOD_GACS(                                                    \
-    L00, L01, L02, L03, L04, R05, R06, R07, R08, R09,                          \
-    L10, L11, L12, L13, L14, R15, R16, R17, R18, R19,                          \
+    L00, L00, L01, L02, L03, L04, R05, R06, R07, R08, R09, R09,                          \
+    L10, L10, L11, L12, L13, L14, R15, R16, R17, R18, R19, R19,                          \
     ...)                                                                       \
-    L00,           L01,           L02,           L03,           L04,           \
-    R05,           R06,           R07,           R08,           R09,           \
-    LGUI_T(L10),   LALT_T(L11),   LCTL_T(L12),   LSFT_T(L13),   L14,           \
-    R15,           RSFT_T(R16),   RCTL_T(R17),   LALT_T(R18),   RGUI_T(R19),   \
+    L00, L00,           L01,           L02,           L03,           L04,           \
+    R05,           R06,           R07,           R08,           R09, R09,           \
+    LGUI_T(L10),LGUI_T(L10),   LALT_T(L11),   LCTL_T(L12),   LSFT_T(L13),   L14,           \
+    R15,           RSFT_T(R16),   RCTL_T(R17),   LALT_T(R18),   RGUI_T(R19),RGUI_T(R19),   \
       __VA_ARGS__
 #define HOME_ROW_MOD_GACS(...) _HOME_ROW_MOD_GACS(__VA_ARGS__)
 
@@ -199,17 +199,17 @@ static uint16_t auto_pointer_layer_timer = 0;
  *
  *     POINTER_MOD(LAYER_ALPHAS_QWERTY)
  */
-#define _POINTER_MOD(                                          \
-    L00, L01, L02, L03, L04, R05, R06, R07, R08, R09,          \
-    L10, L11, L12, L13, L14, R15, R16, R17, R18, R19,          \
-    L20, L21, L22, L23, L24, R25, R26, R27, R28, R29,          \
+#define _POINTER_MOD(                                            \
+    L00, L00, L01, L02, L03, L04, R05, R06, R07, R08, R09, R09,          \
+    L10, L10, L11, L12, L13, L14, R15, R16, R17, R18, R19, R19,          \
+    L20, L20, L21, L22, L23, L24, R25, R26, R27, R28, R29, R29,         \
     ...)                                                       \
-    L00,           L01,   L02,   L03,           L04,           \
-    R05,           R06,           R07,   R08,   R09,           \
-    L10,           L11,   L12,   L13,           L14,           \
-    R15,           R16,           R17,   R18,   R19,           \
-    _L_PTR(L20),   L21,   L22,   L23,           L24,           \
-    R25,           R26,           R27,   R28,   _L_PTR(R29),   \
+    L00, L00,           L01,   L02,   L03,           L04,           \
+    R05,           R06,           R07,   R08,   R09, R09,           \
+    L10, L10,           L11,   L12,   L13,           L14,          \
+    R15,           R16,           R17,   R18,   R19, R19,           \
+    _L_PTR(L20), _L_PTR(L20),   L21,   L22,   L23,           L24,           \
+    R25,           R26,           R27,   R28,   _L_PTR(R29),_L_PTR(R29),   \
       __VA_ARGS__
 #define POINTER_MOD(...) _POINTER_MOD(__VA_ARGS__)
 
