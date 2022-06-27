@@ -25,6 +25,8 @@
 #    include "3x6.h"
 #elif defined(KEYBOARD_bastardkb_charybdis_4x6)
 #    include "4x6.h"
+#elif defined(KEYBOARD_bastardkb_charybdis_hybrid)
+#    include "hybrid.h"
 #else
 #    error "Unsuported format"
 #endif
