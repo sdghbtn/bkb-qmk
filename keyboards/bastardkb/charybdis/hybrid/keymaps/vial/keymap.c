@@ -54,13 +54,13 @@ static uint16_t auto_pointer_layer_timer = 0;
 
 // clang-format off
 /** \brief QWERTY layout (3 rows, 10 columns). */
-#define LAYOUT_LAYER_BASE                                                                                         \
-    ___________________DEAD_HALF_ROW____________________, ___________________DEAD_HALF_ROW____________________,   \
-    XXXXXXX, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, XXXXXXX,      \
-    XXXXXXX, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L, KC_QUOT, XXXXXXX,      \
-    XXXXXXX, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, XXXXXXX,      \
-                      ESC_MED, SPC_NAV, TAB_FUN, ENT_SYM, BSP_NUM, \
-                      XXXXXXX, XXXXXXX, XXXXXXX
+#define LAYOUT_LAYER_BASE                                                                                                                        \
+    ___________________DEAD_HALF_ROW____________________,               ___________________DEAD_HALF_ROW____________________,                    \
+    XXXXXXX,   KC_Q,           KC_W,   KC_E,      KC_R,      KC_T,      KC_Y,      KC_U,   KC_I,      KC_O,     KC_P,              XXXXXXX,      \
+    XXXXXXX,   KC_A,           KC_S,   KC_D,      KC_F,      KC_G,      KC_H,      KC_J,   KC_K,      KC_L,     KC_QUOT,           XXXXXXX,      \
+    XXXXXXX,   _L_PTR(KC_Z),   KC_X,   KC_C,      KC_V,      KC_B,      KC_N,      KC_M,   KC_COMM,   KC_DOT,   _L_PTR(KC_SLSH),   XXXXXXX,      \
+                                       ESC_MED,   SPC_NAV,   TAB_FUN,   ENT_SYM,   BSP_NUM,                                                      \
+                                                  XXXXXXX,   XXXXXXX,   XXXXXXX
 
 /** Convenience row shorthands. */
 #define ___________________DEAD_HALF_ROW____________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
