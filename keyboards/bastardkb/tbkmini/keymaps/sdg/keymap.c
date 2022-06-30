@@ -116,7 +116,7 @@ static uint16_t auto_pointer_layer_timer = 0;
 #define LAYOUT_LAYER_POINTER                                                                                          \
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, DPI_MOD, S_D_MOD, S_D_MOD, DPI_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       \
     ___________________HOME_ROW_GACS_L__________________, ___________________HOME_ROW_GACS_R__________________,       \
-    XXXXXXX, _______, DRGSCRL, XXXXXXX, EEP_RST,   QK_BOOT,   QK_BOOT, EEP_RST, XXXXXXX, DRGSCRL, _______, XXXXXXX,   \
+    XXXXXXX, _______, XXXXXXX, XXXXXXX, EEP_RST,   QK_BOOT,   QK_BOOT, EEP_RST, XXXXXXX, XXXXXXX, _______, XXXXXXX,   \
                       KC_BTN2, KC_BTN1, KC_BTN3, KC_BTN3, KC_BTN1, XXXXXXX
 
 
