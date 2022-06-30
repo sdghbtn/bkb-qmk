@@ -116,7 +116,7 @@ static uint16_t auto_pointer_layer_timer = 0;
 #define LAYOUT_LAYER_POINTER                                                                                          \
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, DPI_MOD, S_D_MOD, S_D_MOD, DPI_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       \
     ___________________HOME_ROW_GACS_L__________________, ___________________HOME_ROW_GACS_R__________________,       \
-    XXXXXXX, _______, DRGSCRL, SNIPING, EEP_RST,   QK_BOOT,   QK_BOOT, EEP_RST, SNIPING, DRGSCRL, _______, XXXXXXX,   \
+    XXXXXXX, _______, DRGSCRL, XXXXXXX, EEP_RST,   QK_BOOT,   QK_BOOT, EEP_RST, XXXXXXX, DRGSCRL, _______, XXXXXXX,   \
                       KC_BTN2, KC_BTN1, KC_BTN3, KC_BTN3, KC_BTN1, XXXXXXX
 
 
@@ -211,7 +211,7 @@ static uint16_t auto_pointer_layer_timer = 0;
       __VA_ARGS__
 #define POINTER_MOD(...) _POINTER_MOD(__VA_ARGS__)
 
-#define LAYOUT_wrapper(...) LAYOUT_tbkmini_hybrid(__VA_ARGS__)
+#define LAYOUT_wrapper(...) LAYOUT_split_3x6_3(__VA_ARGS__)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_wrapper(
